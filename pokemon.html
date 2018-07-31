@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Pokemon Chart</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css"></link>
   </head>
   <body>
     <!--
@@ -38,17 +39,7 @@
         </tr>
       </tbody>
     </table>
-<!--
-action- URL to send form data to,
-method=type of http request -- GET and POST request
-GET- doing something like searching ore retrieving data we're trying to get information from
-examples include- clicking on a hyperlink, using the browser and typing a link in
 
-POST- sending data that we want added to a database posted to a server
-examples include- customer information, user/password login, file upload, signing up for a newsletter, etc
-
-
--->
 <!--
   <h2>Sign In</h2>
     <form method="GET">
@@ -76,28 +67,40 @@ examples include- customer information, user/password login, file upload, signin
     <button>Go!</button>
   </form>
 -->
+
+<!--
+action- URL to send form data to,
+method=type of http request -- GET and POST request
+GET- doing something like searching ore retrieving data we're trying to get information from
+examples include- clicking on a hyperlink, using the browser and typing a link in
+
+POST- sending data that we want added to a database posted to a server
+examples include- customer information, user/password login, file upload, signing up for a newsletter, etc
+
+
+-->
 <h1>Register for Facebook</h1>
-  <form method="GET">
+<form method="POST">
     <label for="firstname">First name:</label>
-    <input id="firstname" type="text" placeholder="First Name" required></input>
+    <input name="firstname" id="firstname" type="text" placeholder="First Name" required>
     <label for="lastname">Last Name:</label>
-    <input id="lastname" type="text" placeholder="Last Name" required></input>
-  </form>
-  <form method="GET">
+    <input name="lastname" id="lastname" type="text" placeholder="Last Name" required>
+
+<div>
     <label for="male">Male</label>
     <input name=gender id="male" type="radio" value="Male">
     <label for="female">Female</label>
     <input name=gender id="female" type="radio" value="Female">
     <label for="other">Other</label>
     <input name=gender id="other" type="radio" value="Other">
-  </form>
-<form method="GET">
+</div>
+<div>
     <label for="email">Email:</label>
     <input id="email" type="email" placeholder="username@domain.com" required>
     <label for="password">Password:</label>
-    <input id="password" type="password" placeholder="Password" required>
-  </form>
-<form method="GET">
+    <input id="password" type="password" placeholder="Password" required pattern=".{6,}" title="Password must be at least 6 characters">
+</div>
+<div>
     <label for="bday">Birthday:</label>
     <select name="Month">
       <option value="January">January</option>
@@ -141,13 +144,13 @@ examples include- customer information, user/password login, file upload, signin
       <option value="1988">1988</option>
       <option value="1987">1987</option>
     </select>
-  </form>
-<form method="GET">
+</div>
+<div>
     <label for="tac">I agree to the terms and conditions</label>
-    <input id="tac" type="checkbox">
-
-
-</form>
+    <input id="tac" type="checkbox" required>
+</div>
 <button>Submit</button>
+</form>
+
   </body>
 </html>

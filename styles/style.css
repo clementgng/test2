@@ -1,0 +1,43 @@
+h1{
+    color: red;
+    border: 5px solid black;
+}
+
+label{
+    color:pink
+}
+
+body{
+    background: url(https://i.pinimg.com/originals/5d/78/66/5d7866cb4a18492c7e8596150e917f95.jpg);
+    background-size: cover;
+    /*background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+/*
+tag(head, body, h1, ul, li, etc.){
+properties
+}
+<label for="male">Male</label>
+<input name=gender id="male" type="radio" value="Male">
+
+#id{
+    properties
+}
+
+#male{
+background:yellow;
+    properties
+}
+}
+
+<div>
+    <p class="highlight">You say yes</p>
+</div>
+.class{
+    properties
+}
+.highlight{
+    properties
+}
+*/
