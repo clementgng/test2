@@ -22,7 +22,7 @@ var p4 = document.querySelector(".special");
 var butt = document.querySelector("button");
 var body2 = document.querySelector("body");
 var color = true;
-butt.addEventListener("click", function(){
+butt.addEventListener("click", ()=>{
   //alert("I CLICKED THE BUTTON");
   //p3.textContent="This isn't a test";
   if(color){
