@@ -27,6 +27,7 @@ function getGitHubUser(username){
         console.log(r.status);
         return r.json();
     }).then((object)=>{
+      console.log(object);
         obj = object;
         assignVals(obj);
         getFollowers(obj.followers_url);
