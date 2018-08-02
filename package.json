@@ -1,0 +1,27 @@
+{
+  "name": "test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nasa.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clementgng/test2.git"
+  },
+  "author": "clement",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clementgng/test2/issues"
+  },
+  "homepage": "https://github.com/clementgng/test2#readme"
+}
