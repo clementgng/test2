@@ -19,13 +19,14 @@ const searchStorage = window.localStorage;
 
 function grabitems(collection) {
   const { items } = collection; // collection.collection.STUFF
-  // console.log(items.length);
+  console.log(collection);
   items.forEach((item) => {
     const image = item.links[0].href;
     const collectionjson = item.href;
     fetch(collectionjson)
       .then((r) => {
         // fetch collection.json file from nasa api
+        // console.log(collectionjson);
         if (r.status === 200) {
           return r.json();
         }
@@ -44,7 +45,7 @@ function grabitems(collection) {
         throw new Error(`return status bad ${res.status}`);
       })
       .then((metdjson) => {
-        // console.log(metdjson);
+        console.log(image);
         // console.log(metdjson["AVAIL:Description"]);
         const descriptions = metdjson['AVAIL:Description'];
         const titles = metdjson['AVAIL:Title'];
