@@ -1,15 +1,35 @@
-const http = require('http');
+const fs = require('fs'); // fs means FileSystem
 
-const server = http.createServer((request, response) => {
-  console.log('headers', request.headers);
-  console.log('method', request.method);
-  console.log('url', request.url);
-  const user = {
-    name: 'John',
-    hobby: 'BALL'
+// readFile is asynchronous
+fs.readFile('./test.txt', (err, data) => {
+  if (err) {
+    throw err;
   }
-  response.setHeader('Content-Type', 'application/json');
-  response.end(JSON.stringify(user));
+  console.log('ASYNC', data.toString());
 });
 
-server.listen(3000);
+// readFileSync is synchronous
+const file = fs.readFileSync('./test.txt');
+console.log('SYNC', file.toString());
+
+// append text to a file
+// fs.appendFile('./test.txt', ' BALL BALL BALL', err => {
+//   if (err) {
+//     console.log(err);
+//   }
+// })
+
+// WRITE
+fs.writeFile('super.txt', 'i am writing to a file', err => {
+  if (err) {
+    console.log(err);
+  }
+})
+
+// DELETE
+fs.unlink('./super.txt', err => {
+  if (err) {
+    console.log(err);
+  }
+  console.log('i got to the end of unlink method')
+})
